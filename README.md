@@ -67,9 +67,7 @@ The dataset includes the following columns:
 2. Import `Hotel_Reservation_Dataset.csv` into a table named `hotel reservation dataset` (use MySQL Workbench's **Table Data Import Wizard** or `LOAD DATA INFILE`).
 3. Open `Hotel_Reservation_Query.sql` in your SQL client.
 4. Run the queries sequentially — each question is labeled with a comment (`# 1.`, `# 2.`, etc.) above its corresponding query.
-
-> **Note:** Question 4 requires converting `arrival_date` to a proper `DATE` type before running date-based queries (handled in the script via `ALTER TABLE ... MODIFY arrival_date date`).
-
+   
 ## 📊 Key Insights (Sample)
 
 - Identified the most popular meal plan and room type among guests.
@@ -82,11 +80,3 @@ The dataset includes the following columns:
 
 This project was completed as part of a data analysis internship/practice exercise to strengthen SQL querying skills — including aggregation, grouping, subqueries, and date manipulation — using a real-world style hotel booking dataset.
 
-## 📝 Notes / Possible Improvements
-
-- Query 6 currently checks `no_of_week_nights != 0` rather than `no_of_weekend_nights > 0`; updating this would more accurately answer "reservations that fall on a weekend."
-- Query 9 uses `HAVING booking_status = "Not_Canceled"`, which returns confirmed (non-canceled) bookings — could be renamed/clarified to match the "Confirmed" status terminology used in the original question.
-- Query 14 could be refined to compute the average price using `AVG(avg_price_per_room)` per room type rather than displaying a single row's price.
-
----
-*Feel free to fork this project and extend it with visualizations (e.g., Power BI or Tableau) built on top of these SQL insights.*
